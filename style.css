@@ -99,7 +99,8 @@ h4{
     grid-column:1/6;
 }
 .welcome-img{
-    grid-column:6/9;
+   grid-column: 6/9;
+ 
 }
 /* .welcome-img{
     width: 100%;
@@ -199,6 +200,15 @@ footer .social{
     max-width:90%;
 } */
 /* small tablet styles */
+@media screen and (max-width:620px){
+
+    .welcome-img{
+        display: none;
+    }
+    .welcome-text{
+        grid-column:1/9;
+    }
+}
 @media screen and (min-width: 620px){
     .welcome-text{
         grid-column:1/5;

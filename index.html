@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cosmo junkie</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="wow/WOW-master/css/libs/animate.css" type="text/css">
+    <script src="WOW-master/dist/wow.min.js"></script>
+
+
+<script>
+      new WOW().init();
+      </script>
   <body>
-    <nav class="site-nav grid">
+    <nav class="site-nav grid animate__animated animate__fadeInLeft animate__delay-0.5s wow fadeInLeft">
       <h1>Cosmo Junkie</h1>
       <ul>
         <li><a href="#portfolio">Portfolio</a></li>
@@ -14,14 +25,13 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <section id="welcome" class="grid">
+    <section id="welcome" class="grid animate__animated animate__fadeInRight animate__delay-0.5s wow fadeInRight">
       <div class="welcome-text">
         <h2>Space Enthuasist<br />& Javascript Developer</h2>
         
        
         <p class="leading">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid
-          magnam</p> <br>
+          Mark has extensive experience in academia and full-stack software development. He is a cotutelle Ph.D. candidate in mathematics and computer science.</p> <br>
         <a href="#portfolio" class="button">View my work</a>
       </div>
       <div class="welcome-img">
@@ -33,15 +43,15 @@
       <h3>Some of my Projects</h3>
       <div class="projects grid">
         <a href="">
-          <img src="assets/project1.jpg" alt="space race img" />
+          <img class="animate__animated animate__backInDown animate__delay-0.5s wow backInDown" src="assets/project1.jpg" alt="space race img" />
           <h4>Race game</h4>
         </a>
         <a href="">
-          <img src="assets/project2.jpg" alt="Planet img" />
+          <img class="animate__animated animate__backInDown animate__delay-0.5s wow backInDown" src="assets/project2.jpg" alt="Planet img" />
           <h4>Planet Boy API</h4>
         </a>
         <a href="">
-          <img src="assets/project3.jpg" alt="Cosmo blog" />
+          <img class="animate__animated animate__backInDown animate__delay-0.5s wow backInDown" src="assets/project3.jpg" alt="Cosmo blog" />
           <h4>Cosmo blog</h4>
         </a>
       </div>
@@ -50,31 +60,31 @@
       <h3>Things I Can Do</h3>
       <ul class="grid">
         <li>
-          <img src="assets/1.jpg" alt="javascript" />
+          <img class="animate__animated animate__fadeInUp animate__delay-0.5s wow fadeInUp" src="assets/1.jpg" alt="javascript" />
           <h4>Javascript</h4>
         </li>
         <li>
-          <img src="assets/2.jpg" alt="react" />
+          <img class="animate__animated animate__fadeInUp animate__delay-0.5s wow fadeInUp" src="assets/2.jpg" alt="react" />
           <h4>React</h4>
         </li>
         <li>
-          <img src="assets/3.jpg" alt="firebase" />
+          <img class="animate__animated animate__fadeInUp animate__delay-0.5s wow fadeInUp" src="assets/3.jpg" alt="firebase" />
           <h4>Firebase</h4>
         </li>
         <li>
-          <img src="assets/4.jpg" alt="flutter" />
+          <img class="animate__animated animate__fadeInUp animate__delay-0.5s wow fadeInUp" src="assets/4.jpg" alt="flutter" />
           <h4>Flutter</h4>
         </li>
       </ul>
     </section>
-    <section id="contact">
+    <section id="contact" class="animate__animated animate__rotateIn animate__delay-0.5s wow rotateIn">
       <h3>Get in Touch</h3>
       <p class="leading">
-        Lorem, ipsum dolor sit amet consectetur 
+      Still can't find what you're looking for?
       </p>
       <form>
         <input type="text" placeholder="NAME" />
-        <input type="text" placeholder="EMAIL" />
+        <input type="email" placeholder="EMAIL" />
         <textarea placeholder="YOUR MESSAGE"></textarea>
         <button class="button">Send Message</button>
       </form>
@@ -84,7 +94,7 @@
         <p class="copyright">Copyright 2020 Cosmo junkie</p>
         <ul class="social">
           <li>
-            <a href=""><img src="assets/fb.png" alt="" /></a>
+            <a class="animate__animated animate__zoomInRight animate__delay-0.5s wow zoomInRight" href=""><img src="assets/fb.png" alt="" /></a>
           </li>
           <li>
             <a href=""><img src="assets/tw.png" alt="" /></a>

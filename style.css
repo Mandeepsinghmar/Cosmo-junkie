@@ -21,6 +21,9 @@
 
  /* base styles */
 
+ html{
+     scroll-behavior: smooth;
+ }
  body{
      background-color: var(--secondary);
      overflow-x: hidden;
@@ -40,13 +43,7 @@
      color:#222;
      background: var(--primary)
  }
- input,textarea{
-     background-color:var(--secondary)
-     padding:10px 16px;
-     border-radius:20px;
-     border:2px solid #9893D8;
-     color:#f2f2f2;
- }
+
 
 /* fonts */
 @font-face{
@@ -81,10 +78,14 @@ h4{
     gap:10px;
 }
 .site-nav{
-      margin:0px 20px;
+     padding: 5px;padding-bottom: 2px;
+     padding-left:3rem;
+     padding-right: 3rem;
+     
 }
 .site-nav ul{
     display:none;
+    padding-right: 4rem;
 }
 .site-nav h1{
     grid-column:1/4;
@@ -93,14 +94,16 @@ h4{
     border-bottom:3px solid var(--primary);
 }
 #welcome{
-    padding:0 20px 20px 20px;
+    padding:0 20px 20px 10px;
 }
 .welcome-text{
+    padding-left:40px;
+    padding-right: 40px;
     grid-column:1/6;
 }
 .welcome-img{
    grid-column: 6/9;
- 
+   padding-right: 0px;
 }
 
 .welcome-text a{
@@ -114,13 +117,19 @@ h4{
     text-align:center;
     margin-bottom:0;
 }
-#portfolio{
-   
-    margin: auto;
-}
+
 .projects a{
     grid-column:1/9;
 }
+.projects a:hover{
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+
+}
+
 
 .projects a *{
     max-width:40%;
@@ -128,11 +137,12 @@ h4{
     border-radius:25%;
 }
 .projects h4{
+    font-size: 1.5rem;
     color:purple;
 }
 #skills{
     padding:30px 20px;
-    background-color:#black;
+    background-color:black;
 }
 #skills h3{
     text-align: center;
@@ -150,7 +160,12 @@ h4{
     margin:10px auto;
     border-radius:10%;
 }
+#skills img:hover{
+      position: relative;
+      top: -4px;
+}
 #contact{
+    margin-bottom: 50px;
     padding;30px 20px;
     background-color:rgb(7, 3, 7);
 }
@@ -158,6 +173,10 @@ h4{
         text-align:center;
         margin-bottom:0;
 }
+#contact h3{
+    margin-bottom: 10px;
+}
+
 #contact form{
     margin:20px auto;
     width:80%;
@@ -167,22 +186,33 @@ h4{
 #contact input, #contact textarea{
     width:100%;
     margin:10px 0;
+    background-color:var(--secondary);
+    padding:10px 16px;
+    border-radius:20px;
+    border:2px solid #9893D8;
+    color:#f2f2f2;
 }
-#contact .button{
+ input:focus, textarea:focus{
+    outline: none;
+}
+#contact .button{ 
     margin-top:10px;
 }
+ 
 footer{
-   padding:30px 20px;
+   padding:20px 20px;
    border-top: 2px solid purple;
 }
 footer img{
    width:30px;
+  
 }
 footer .copyright{
-    grid-column:1/3;
-    font-size:0.8em;
+    grid-column:1/5;
+    font-size:1rem;
 }
 footer .social{
+    padding-right: 20px;
     grid-column:7/9;
     display:flex;
     justify-content: flex-end;
@@ -197,13 +227,24 @@ footer .social{
 @media screen and (min-width:600px){
 .site-nav{
     margin:0px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:3;
+    background-color: #000;
 }
 .site-nav ul{
   display:flex;
   grid-column:6/9;
-  margin:20px 0;
+  margin-top: 20px;
   gap:20px;
 }
+#welcome{
+    margin-top: 90px;
+    padding:0 20px 20px 10px;
+}
+
 }
 
 @media screen and (max-width:620px){
@@ -213,15 +254,33 @@ footer .social{
     }  
     .welcome-text{
         grid-column:1/9;
-        background-image: url("assets/img 1.jpg");
+        background-image: linear-gradient(120deg, #000000bb, #000000e8), url("assets/img 1.jpg");
         background-repeat: no-repeat;
         background-position: right;
         background-size:contain ;
+        opacity: 1;
     }
     .leading{
         grid-column: 1/5;
     }
-  
+    #portfolio h3{
+        margin-bottom: 40px;
+    }
+
+    .projects{
+       text-align: center;
+    }
+  .projects a{
+      grid-column: 1/9;
+    
+  }
+    .projects a *{
+        text-align: center;
+        width: 80%;
+        max-width:100%;
+        align-self: center;
+        border-radius:25%;
+    }
 }
 @media screen and (min-width: 621px){
 
@@ -233,22 +292,28 @@ footer .social{
         grid-column:5/9;
     }
     .welcome-img{
+        padding-right: 0px;
         width: 100%;
     }
     .projects{
         margin-top:40px;
     }
     .projects a{
-        grid-column:span 4;
-        display:block;
-        margin:20px 0; 
-        width:200%; 
+        width: 200%;
     }
-    .projects a:last-child{
-        grid-column:3/7;
+    .projects a:nth-child(1){
+        grid-column:2/4 ;
+        /* width:250%; */
     }
+        .projects a:nth-child(2){
+           grid-column:4/6;
+           padding-top:160px;
+       }
+       .projects a:nth-child(3){
+           grid-column:6/8;
+       } 
     .projects a *{
-        max-width:40%;
+        max-width:48%;
         margin:10px;
     }
     .projects h4{
@@ -266,8 +331,7 @@ footer .social{
     }
     .grid{
         width:100%;
-        max-width:1060px;
-        margin:0 auto;
+        margin:0px auto;
     }
     .welcome-text{
         grid-column:1/6;
@@ -282,6 +346,9 @@ footer .social{
   }
   .site-nav h1{
     grid-column:1/3;
+ }
+ .site-nav ul{
+     margin-right: 20px;
  }
  .projects a:nth-child(1){
      grid-column:2/4 ;
@@ -312,6 +379,9 @@ footer .social{
 
     body{
         font-size:20px;
+    }
+    .site-nav ul{
+        margin-right: 20px;
     }
     #welcome, #portfolio, #skills, #contact{
         padding:40px 0;

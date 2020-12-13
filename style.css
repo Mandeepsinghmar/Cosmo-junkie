@@ -9,7 +9,7 @@
  *{
      box-sizing:border-box;
  }
- 
+
  body,p,a,ul,li{
      margin: 0;
      padding: 0;
@@ -101,9 +101,9 @@ h4{
 .welcome-img{
     grid-column:6/9;
 }
-.welcome-img{
-    width: 200%;
-}
+/* .welcome-img{
+    width: 100%;
+} */
 .welcome-text a{
     margin:20px 0;
 }
@@ -207,7 +207,7 @@ footer .social{
         grid-column:5/9;
     }
     .welcome-img{
-        width: 200%;
+        width: 100%;
     }
     .projects{
         margin-top:40px;

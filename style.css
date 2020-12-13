@@ -5,6 +5,11 @@
  }
 
  /* reset */
+
+ *{
+     box-sizing:border-box;
+ }
+ 
  body,p,a,ul,li{
      margin: 0;
      padding: 0;
